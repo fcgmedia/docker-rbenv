@@ -19,7 +19,7 @@ RUN echo 'eval "$(rbenv init -)"' >> .bashrc
 
 # Install multiple versions of ruby
 ENV CONFIGURE_OPTS --disable-install-doc
-ADD versions.txt versions.txt
+ADD ./versions.txt versions.txt
 RUN xargs -L 1 rbenv install < versions.txt
 
 # Install Bundler for each version of ruby
